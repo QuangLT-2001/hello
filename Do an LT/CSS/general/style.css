@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+.shopNQ {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    overflow: hidden;
+    animation: fullWidth 1s 2.6s forwards;
+    -webkit-animation: fullWidth 1s 2.6s forwards;
+}
+@keyframes fullWidth {
+    0% {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+    100% {
+        height: 100%;
+        overflow: visible;
+    }
+}
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+ul {
+    margin-bottom: 0 !important;
+}
+
+.load {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+    overflow: hidden;
+    animation: hide 1s 2.5s forwards;
+    -webkit-animation: hide 1s 2.5s forwards;
+}
+@keyframes hide {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+.load > img {
+    object-fit: cover;
+    width: 150px;
+}
